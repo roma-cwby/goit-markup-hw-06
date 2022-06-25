@@ -248,13 +248,11 @@ body{
 
 .footer .container{
     display: flex;
+    align-items: baseline;
 }
 
 .footer-soc{
-    margin-top: 12px;
     margin-left: 70px;
-
-    height: 80px;
 }
 
 .footer-soc-list {
@@ -296,7 +294,6 @@ body{
 
 
 .footer-email-box{
-    margin-top: 12px;
     margin-left: auto;
 
     width: 570px;
@@ -852,6 +849,7 @@ body{
     justify-content: center;
 
     position: absolute;
+    padding: 0;
 
     top: 8px;
     right: 8px;
@@ -859,11 +857,23 @@ body{
     width: 30px;
     height: 30px;
 
+    transition: color var(--transition-time) var(--cubic-func);
+
+    color: #000000;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--white-color);
 
     cursor: pointer;
+}
+
+.modal-close-btn svg{
+    fill: currentColor;
+}
+
+.modal-close-btn:hover, 
+.modal-close-btn:focus{
+    color: var(--accent-color);
 }
 
 .is-hidden{
